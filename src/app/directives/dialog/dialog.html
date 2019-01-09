@@ -1,0 +1,32 @@
+<div class="modal {{statusAdd || statusRemove ? 'in' : ''}}">
+  <div class="backdrop "></div>
+  <div class="content {{statusAdd ? 'in' : ''}}">
+      <form class="" name="form_contact">
+        <div class="modal-body">
+            <div class="item">
+              <input type="text" name="fio" data-ng-model="contact.fio" placeholder="ФИО">
+            </div>
+            <div class="item">
+              <input type="text" name="phone" data-ng-model="contact.phone" placeholder="Телефон">
+            </div>
+            <div class="item">
+              <input type="text" name="email" data-ng-model="contact.email" placeholder="Электронная почта">
+            </div>
+            <div class="item">
+              <input type="text" name="avatar" data-ng-model="contact.avatar" placeholder="Ссылка на аватар">
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" ng-click="addContact(contact, form_contact)">Добавить контакт</button>
+          <button ng-click="cancel(form_contact)">Отмена</button>
+        </div>
+      </form>
+  </div>
+  <div class="content {{statusRemove ? 'in' : ''}}">
+    <p>Вы действительно хотите удалить контакт {{contact.lastname}} {{contact.firstname}} {{contact.middlename}}?</p>
+    <div class="modal-footer">
+      <button type="submit" ng-click="removeContact(id)">ОК</button>
+      <button ng-click="cancel()">Отмена</button>
+    </div>
+  </div>
+</div>

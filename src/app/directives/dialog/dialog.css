@@ -1,0 +1,47 @@
+
+.modal {
+  position: fixed;
+  overflow: auto;
+  z-index: 10000;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+
+.modal.in {
+  display: flex;
+}
+
+.backdrop {
+  background-color: rgba(255,255,255,0.6);
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+
+  animation: ngdialog-fadein 0.5s;
+}
+
+.content {
+  background-color: #fff;
+  animation: ngdialog-flyin .5s;
+  padding: 1.8em 2em;
+  width: 440px;
+  border: 2px solid gray;
+  margin: auto;
+  position: fixed;
+  position: relative;
+  display: none;
+}
+
+.in {
+  display: block;
+}
+
+.content .item {
+  margin-bottom: 20px;
+}

@@ -1,0 +1,46 @@
+<div>
+
+  <h1 class="title">Адресная книга {{ name }}</h1>
+
+  <table class="table">
+    <thead>
+      <tr class="row">
+        <th class="col"></th>
+        <th class="col">
+          <span>Контактное лицо</span>
+        </th>
+        <th class="col">
+          <span>Телефон</span>
+        </th>
+        <th class="col">
+          <span>Электронная почта</span>
+        </th>
+        <th class="col">
+          <button data-ng-click="addProfile()">Добавить</button>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+    <tr class="row" data-ng-repeat="contact in contacts" data-ng-dblclick="openProfile(contact.id)">
+      <td class="col">
+        <span><img data-ng-src={{contact.avatar}} class="img" /></span>
+      </td>
+      <td class="col">
+        <span>{{contact.lastname}} {{contact.firstname}} {{contact.middlename}}</span>
+      </td>
+      <td class="col">
+        <span>{{contact.phone}}</span>
+      </td>
+      <td class="col">
+        <span>{{contact.email}}</span>
+      </td>
+
+      <td class="col">
+        <button data-ng-click="removeProfile(contact.id)" class="remove">Удалить</button>
+      </td>
+    </tr>
+  </table>
+  <div data-dialog-directive data-status-add="dialogAddStatus" data-status-remove="dialogRemoveStatus" data-id="contactId"></div>
+</div>

@@ -1,0 +1,19 @@
+<div>
+  <a data-ng-href="/">← Вернуться назад</a>
+  <h1 class="title">Profile</h1>
+
+  <h1>
+    <img data-ng-src={{contact.avatar}} alt="" class="avatar" />
+    {{contact.lastname}} {{contact.firstname}} {{contact.middlename}}
+  </h1>
+  <table class="table">
+    <tr>
+      <td>Телефон:</td>
+      <td>{{contact.phone}}</td>
+    </tr>
+    <tr>
+      <td>Электронная почта:</td>
+      <td>{{contact.email}}</td>
+    </tr>
+  </table>
+</div>
