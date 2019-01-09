@@ -23,7 +23,7 @@ This workflow serves as a starting point for building AngularJS (1.x) applicatio
 
 ```bash
 # clone our repo
-$ git clone https://github.com/preboot/angularjs-webpack.git my-app
+$ git clone https://github.com/yarron/ng1-test ng1-test
 
 # change directory to your app
 $ cd my-app
